@@ -1,0 +1,74 @@
+[
+  {
+    "query": "I want to add a notification system to the project — push, email, in-app. Need to think through the architecture before writing any code",
+    "should_trigger": true
+  },
+  {
+    "query": "I have an idea for a new feature — let's discuss the best way to implement rate limiting for the API",
+    "should_trigger": true
+  },
+  {
+    "query": "Need to redo the auth layer, currently session-based, want JWT. Let's plan it out first",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to add WebSocket support to the app for real-time updates. Let's think through the approach before coding",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a new CLI command for exporting data to CSV, let's sketch out a plan",
+    "should_trigger": true
+  },
+  {
+    "query": "Let's brainstorm how to restructure the database schema for multi-tenancy",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to add Redis caching but I'm not sure about the invalidation strategy — help me think it through",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix a bug: form submission creates duplicate entries in the DB",
+    "should_trigger": false
+  },
+  {
+    "query": "Show me the contents of cmd/server/main.go",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the tests and show me what failed",
+    "should_trigger": false
+  },
+  {
+    "query": "Rename the function GetUser to FetchUser across all files",
+    "should_trigger": false
+  },
+  {
+    "query": "Add type hints to this function and write a docstring",
+    "should_trigger": false
+  },
+  {
+    "query": "git log --oneline last 20 commits",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how the middleware chain works in this project",
+    "should_trigger": false
+  },
+  {
+    "query": "The plan is already approved, start coding — create a branch and go",
+    "should_trigger": false
+  },
+  {
+    "query": "Let's implement the plan from docs/plans/feature.md, all tasks are already defined",
+    "should_trigger": false
+  },
+  {
+    "query": "Review PR #42 and leave comments",
+    "should_trigger": false
+  },
+  {
+    "query": "Update the dependencies in go.mod to the latest versions",
+    "should_trigger": false
+  }
+]

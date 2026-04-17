@@ -1,0 +1,74 @@
+[
+  {
+    "query": "Plan is approved, let's start implementation — need to create a branch and structure the commits",
+    "should_trigger": true
+  },
+  {
+    "query": "Exiting plan mode, time to code. Start by setting up the git branch",
+    "should_trigger": true
+  },
+  {
+    "query": "The plan is approved, let's start implementation. Set up the branch first",
+    "should_trigger": true
+  },
+  {
+    "query": "OK the plan looks good, let's get to it. Branch first, then code",
+    "should_trigger": true
+  },
+  {
+    "query": "Starting work on the design doc, need a branch feat/notifications",
+    "should_trigger": true
+  },
+  {
+    "query": "Transitioning from planning to coding now — the design is finalized",
+    "should_trigger": true
+  },
+  {
+    "query": "Let's start implementing, the plan is in docs/plans/rate-limiting.md",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to add a new feature, let's discuss the approach first",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a new git tag v1.2.3",
+    "should_trigger": false
+  },
+  {
+    "query": "Do a git rebase master and resolve the conflicts",
+    "should_trigger": false
+  },
+  {
+    "query": "Show me the git diff between main and the current branch",
+    "should_trigger": false
+  },
+  {
+    "query": "Push the current branch to remote",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix this bug — just change the condition in the if on line 42",
+    "should_trigger": false
+  },
+  {
+    "query": "Amend the last commit message via git commit --amend",
+    "should_trigger": false
+  },
+  {
+    "query": "Switch to the feature/auth branch and show me what's there",
+    "should_trigger": false
+  },
+  {
+    "query": "Cherry-pick commit abc123 into the current branch",
+    "should_trigger": false
+  },
+  {
+    "query": "Review the PR and leave code review comments",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how this SQL query works",
+    "should_trigger": false
+  }
+]

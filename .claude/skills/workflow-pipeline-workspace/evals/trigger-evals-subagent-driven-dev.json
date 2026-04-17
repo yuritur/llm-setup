@@ -1,0 +1,74 @@
+[
+  {
+    "query": "Branch is created, plan is ready — dispatch subagents to implement the tasks",
+    "should_trigger": true
+  },
+  {
+    "query": "Let's implement the plan. Branch is ready, tasks are defined in the design doc",
+    "should_trigger": true
+  },
+  {
+    "query": "Let's build it! Branch feat/notifications is ready, plan with 5 tasks is approved",
+    "should_trigger": true
+  },
+  {
+    "query": "Start building — the plan has 3 tasks, branch is set up, let's dispatch subagents",
+    "should_trigger": true
+  },
+  {
+    "query": "Implement the plan from docs/plans/caching.md via subagents, branch already exists",
+    "should_trigger": true
+  },
+  {
+    "query": "All tasks are defined, git branch is ready — start implementing them one by one",
+    "should_trigger": true
+  },
+  {
+    "query": "OK plan looks great, branch feat/rate-limit is created. Let's start coding",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to add a feature, let's first discuss what and how",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix a bug in the calculateTotal function — it's computing discounts wrong",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a branch for the work and define the commit strategy",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a unit test for the parseConfig function",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor this file — extract the duplicated code into a helper",
+    "should_trigger": false
+  },
+  {
+    "query": "Run go test ./... and show me the results",
+    "should_trigger": false
+  },
+  {
+    "query": "Update README.md — add a section about the new API endpoint",
+    "should_trigger": false
+  },
+  {
+    "query": "Show me the plan from docs/plans/auth.md — I want to re-read it before we start",
+    "should_trigger": false
+  },
+  {
+    "query": "Review PR #15, need a code review",
+    "should_trigger": false
+  },
+  {
+    "query": "Add *.log and tmp/ to .gitignore",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain the difference between goroutines and threads",
+    "should_trigger": false
+  }
+]

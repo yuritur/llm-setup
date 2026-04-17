@@ -1,0 +1,77 @@
+---
+alwaysApply: true
+---
+
+# Mandatory Workflow Pipeline
+
+This is a HARD REQUIREMENT. Every step below MUST be followed — no shortcuts, no skipping, no "this is too simple."
+
+## The Pipeline
+
+```
+Plan Mode entered → brainstorming (+ adr-architect if architectural decisions arise) → design doc → implementation plan → Exit Plan Mode → git-workflow → subagent-driven-development → done
+```
+
+## Rules
+
+### 1. Plan Mode = Brainstorming First
+
+When the user enters Plan mode (or you enter it), the FIRST action is to invoke the `brainstorming` skill. No exceptions.
+
+- Do NOT start writing a plan immediately
+- Do NOT skip brainstorming because "the task is simple"
+- brainstorming explores intent, asks questions, proposes approaches, gets approval
+- Only after the user approves the design do you write the implementation plan
+
+### 1a. Architectural Decisions — ask first, then adr-architect
+
+During brainstorming (step "Propose 2-3 approaches"), evaluate whether any decision looks architecturally significant — hard to reverse, cross-cutting, externally visible, resource-committing, or precedent-setting.
+
+If such a decision appears, ASK the user:
+> "This looks like a fundamental decision (choosing X over Y). Want me to record it as an ADR?"
+
+- User says yes → invoke `adr-architect`, write the ADR to `docs/adr/`, reference it from the design doc
+- User says no → move on, no ADR
+
+Do NOT auto-invoke adr-architect. Always ask first.
+
+### 2. Exit Plan Mode = git-workflow + subagent-driven-development
+
+When Plan mode ends (plan is written and approved), IMMEDIATELY:
+
+1. Invoke `git-workflow` — create a branch, announce it
+2. Invoke `subagent-driven-development` — execute the plan task by task
+
+Do NOT:
+- Start coding without creating a branch first
+- Execute tasks manually instead of dispatching subagents
+- Skip the subagent workflow "because there are only 2 tasks"
+
+### 3. Every Task = Subagent + Code Review
+
+For EVERY task in the plan:
+- Dispatch a fresh implementer subagent
+- After implementation: dispatch spec compliance reviewer
+- After spec review passes: dispatch code quality reviewer (code-reviewer agent)
+- Only mark task complete when BOTH reviews pass
+
+Do NOT:
+- Skip code review on "trivial" tasks
+- Review your own code instead of dispatching a reviewer subagent
+- Batch multiple tasks into one subagent
+
+### 4. After All Tasks = Final Review + PR
+
+When all tasks are done:
+- Dispatch a final code-reviewer for the entire implementation
+- Create PR via git-workflow
+- Share the PR URL
+
+## Violation Check
+
+Before taking any implementation action, verify:
+- [ ] Did brainstorming happen? If not → STOP, invoke brainstorming
+- [ ] Is there an approved design doc? If not → STOP, finish brainstorming
+- [ ] Is there a written plan? If not → STOP, write the plan
+- [ ] Is there a git branch? If not → STOP, invoke git-workflow
+- [ ] Am I dispatching a subagent for this task? If not → STOP, use subagent-driven-development
