@@ -20,5 +20,5 @@ The setup is designed for a plan-first, review-driven workflow: clarify intent, 
 Add stack-specific skills when they provide clear value.
 Example: for a Python project, include a `python-senior` style skill; for a Go project, include a Go-focused skill.
 
-Avoid loading too many skills at once because they consume context and can reduce signal quality.
+Avoid loading too many skills at once because they consume context and can make responses less focused.
 Only keep skills relevant to the current codebase and task (e.g., do not use Python skills in a Go-only project).
